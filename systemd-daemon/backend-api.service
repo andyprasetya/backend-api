@@ -1,0 +1,13 @@
+[Unit]
+Description=Backend API by TruLogix
+Documentation=http://online.indotechsolution.co.id/docs/backend-api
+After=network.target
+
+[Service]
+Type=simple
+User=__SET_YOUR_USERNAME__
+ExecStart=/usr/bin/node __FULL_PATH_TO__/backend-api/index.js
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
